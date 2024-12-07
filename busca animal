@@ -1,0 +1,15 @@
+# cadastro_animais.py
+def buscar_animal(animais, nome):
+    for animal in animais:
+        if animal['nome'] == nome:
+            return animal
+    return "Animal não encontrado."
+
+if __name__ == "__main__":
+    animais = [
+        {'nome': 'Rex', 'idade': 5, 'especie': 'Cachorro'},
+        {'nome': 'Mimi', 'idade': 2, 'especie': 'Gato'}
+    ]
+    nome_busca = input("Digite o nome do animal que deseja buscar: ")
+    resultado = buscar_animal(animais, nome_busca)
+    print(resultado)
